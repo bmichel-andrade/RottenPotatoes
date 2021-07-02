@@ -21,3 +21,4 @@ spec:
               value: mongouser
             - name: MONGO_INITDB_ROOT_PASSWORD
               value: mongopwd
+#bruno
