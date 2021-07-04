@@ -27,6 +27,7 @@ jobs:
 
   CD:
     runs-on: ubuntu-latest
+    needs: [CI]
     steps: 
       - uses: actions/checkout@v2
       - name: kubernetes set context
@@ -34,6 +35,3 @@ jobs:
         with:
           method: kubeconfig
           kubeconfig: ${{ secrets.K8S_CONFIG }}
-
-
-
