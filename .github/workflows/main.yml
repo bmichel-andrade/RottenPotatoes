@@ -1,4 +1,4 @@
-name: CI/CD
+name: CI-CD
 on:
   push:
     branches: [ main ]
@@ -19,7 +19,3 @@ jobs:
           tags: |
             bmichelad/rotten-potatoes:latest
             bmichelad/rotten-potatoes:${{github.run_number}}
-      - name: Docker Login
-        with:
-          username:${{sercrets.DOCKERHUB_USER}}
-          password:${{sercrets.DOCKERHUB_PWD}}
